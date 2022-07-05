@@ -1,0 +1,451 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: calibri, sans-serif;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 5%;
+    background-color: rgba(98, 49, 98, 1);
+    background-image: linear-gradient(rgb(201, 29, 201), rgba(98, 49, 98, 1));
+    overflow: auto;
+}
+
+.navbar .logo{
+    width: 150px;
+    color: goldenrod;
+    cursor: pointer;
+}
+
+.ul{
+    flex: 1;
+    text-align: right;
+}
+
+.navbar ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 0 20px;
+}
+
+.ref{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    position: relative;
+}
+
+#b1{
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    border-radius: 3px;
+    color: white;
+    font-weight: bold;
+    font-size: medium;
+}
+
+#b2{
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    border-radius: 3px;
+    color: white;
+    font-weight: bold;
+    font-size: medium;
+}
+
+.s1{
+    display: flex;
+    position: relative;
+    background-color: rgba(98, 49, 98, 1);
+    background-image: linear-gradient(rgba(201, 29, 201, 1), rgba(98, 49, 98, 1));
+    padding: 4px;
+    bottom: 150px;
+    color: black;
+    margin: 0 0 0 0;
+    height: 0.25rem;
+    width: 99.3%;
+    overflow: auto;
+}
+
+.s2{
+    display: flex;
+    position: relative;
+    background-color: rgba(98, 49, 98, 1);
+    background-image: linear-gradient(rgba(98, 49, 98, 1), rgba(201, 29, 201, 1));
+    background-size: cover;
+    padding: 4px;
+    bottom: -295px;
+    color: black;
+    transform: translateX(-50px);
+    margin: 0 -100% 0 0;
+    height: 0.25rem;
+    width: 106.3%;
+    overflow: auto;
+}
+
+.business{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(35, 43, 45, 0.75)),url(Business.webp);
+    background-size: cover;
+    background-position: center;
+}
+
+#b1{
+    background-color: rgb(69, 168, 214);
+    border-color: transparent;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+#b2{
+    background-color: rgb(205, 38, 66);
+    border-color: transparent;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.navbar ul li a::after{
+    content:'';
+    height: 3px;
+    width: 0;
+    background: rgb(69, 196, 242);
+    position: absolute;
+    left: 0px;
+    bottom: -8px;
+    transition: width 0.25s;
+}
+
+#b1:hover{
+    background-color: rgb(10, 95, 232);
+}
+
+#b2:hover{
+    background-color: rgb(230, 204, 38);
+}
+
+.navbar ul li a:hover::after{
+    width: 100%;
+}
+
+.welcome{
+    width: 100%;
+    position:absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: white;
+}
+
+.welcome h1{
+    font-size: 50px;
+}
+
+.welcome p{
+    margin: 20px auto;
+    font-size: 20px;
+    line-height: 25px;
+}
+
+.start{
+    margin: 10px 20px;
+    width: 200px;
+    background: transparent;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: 0.25s;
+    border-color: rgb(31, 176, 103);
+    border: 5px 5px 5px 5px;
+}
+
+.start:hover{
+    background: rgb(31, 176, 103);
+}
+
+#img-res{
+    background: rgb(69, 79, 72);
+    width: 100%;
+    height: 100vh;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    object-fit: cover;
+    object-position: center center;
+    position: relative;
+}
+
+.slider{
+    background: rgb(69, 79, 72);
+    width:100%;
+    height: 100vh;
+    justify-content: space-around;
+    overflow: hidden;
+}
+
+.slides{
+    width: 500%;
+    height: 500px;
+    display: flex;
+}
+
+.slides input{
+    display: none;
+}
+
+.slide{
+    width: 20%;
+    transition: 2s;
+}
+
+.navigation-manual{
+    position: absolute;
+    width: 100%;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn{
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+    margin-top: 700px;
+    margin-bottom: 700px;
+}
+
+.manual-btn:not(:last-child){
+    margin-right:40px;
+}
+
+.manual-btn:hover{
+    background:white;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -20%;
+}
+
+#radio3:checked ~ .first{
+    margin-left: -40%;
+}
+
+.idea{
+    margin-top: -35%;
+    margin-left: 40%;
+    transform: translateY(-50%);
+    text-align: center;
+    position: relative;
+    color: white;
+    font-style: bold;
+    font-size: 50px;
+    display: flex;
+    overflow: hidden;
+}
+
+.p1{
+    margin-top: 20px;
+    font-size: 25px;
+    margin-left: 40%;
+    transform: translateY(-50%);
+    text-align: center;
+    position: relative;
+    color: white;
+    font-style: bold;
+    display: flex;
+    overflow: hidden;
+}
+
+.business2{
+    width: 100%;
+    background: rgb(69, 79, 72);;
+    height: 100vh;
+    padding-top: 20px;
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(35, 43, 45, 0.75)),url(money.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.conclusion{
+    padding: 50px;
+    align-items: center;
+    transform: translateY(70%);
+    color: white;
+}
+
+.conclusion h1{
+    font-size: 50px;
+}
+
+.conclusion p{
+    margin: 20px auto;
+    font-size: 20px;
+    line-height: 25px;
+}
+
+.social-media{
+    display: flex;
+    align-items: center;
+    height: 140px;
+    justify-content: space-around;
+    padding: 20px 2%;
+    background-color: rgba(98, 49, 98, 1);
+    background-image: linear-gradient(rgba(98, 49, 98, 1), rgba(201, 29, 201, 1));
+    overflow: auto;
+}
+
+.social-icon{
+    font-size: 30px;
+    margin: 5px 0px;
+    color: white;
+    transition: 0.25s;
+    align-items: center;
+}
+
+.social-icon:hover{
+    color: gray;
+}
+
+.body-sign-in{
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(35, 43, 45, 0.75)),url(Business.webp);
+    background-size: cover;
+}
+
+.f1{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    align-items: center;
+}
+
+.login-box{
+    width:280px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.login-box h1{
+    color: white;
+    float: left;
+    font-size: 60px;
+    border-bottom: 6px solid white;
+    margin-bottom: 50px;
+    padding: 13px 0;
+}
+
+.textbox{
+    width: 100%;
+    font-size: 20px;
+    padding: 8px 0;
+    margin: 8px 0;
+    border-radius: 5px;
+}
+
+.r2{
+    text-decoration: none;
+    justify-content: space-between;
+    margin: 0px 0px;
+    color: white;
+}
+
+.rr{
+    
+    text-decoration: none;
+    justify-content: space-between;
+    margin: 0 0 40px 0;
+    color: white;
+}
+
+.button{
+    width: 140px;
+    padding: 5px;
+    margin: 5px;
+    background-color: rgb(7, 78, 55);
+    color: white;
+    cursor: pointer;
+    border-radius: 20rem;
+    border-color: rgb(7,78,55);
+    transition: 0.25s;
+}
+
+.button:hover{
+    background-color:rgb(177, 246, 246);
+    color: black;
+}
+
+.body-sign-up{
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(35, 43, 45, 0.75)),url(registration.jpg);
+}
+
+.login-box2{
+    width:280px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.login-box2 h1{
+    color: white;
+    float: left;
+    font-size: 60px;
+    border-bottom: 6px solid white;
+    margin-bottom: 50px;
+    padding: 13px 0;
+}
+
+.textbox2{
+    width: 100%;
+    font-size: 20px;
+    padding: 8px 0;
+    margin: 8px 0;
+
+}
+
+.r3{
+    text-decoration: none;
+    margin: 2px 5px;
+    padding: 0px 10px;
+    color: white;
+}
+
+.rr2{
+    text-decoration: none;
+    justify-content: space-between;
+    margin: 0 0 10px -5px;
+    color: white;
+}
+
+.button2{
+    width: 140px;
+    padding: 5px;
+    margin: 5px;
+    background-color: rgb(118, 81, 12);
+    color: white;
+    cursor: pointer;
+    border-radius: 20rem;
+    border-color: rgb(118, 81, 12);
+    transition: 0.25s;
+}
+
+.button2:hover{
+    background-color:orange;
+    color: black;
+}
+
